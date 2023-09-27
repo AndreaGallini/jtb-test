@@ -27,15 +27,14 @@ function App() {
       : slugArray.join("/");
 
   //We are also going to pass the language as prop to get the correct data based on the language
-
+  let resolveRelations = ["featured-posts.posts", "selected-posts.posts"];
 const story = useStoryblok(
-  stSlug, { version: "draft", language },
+  stSlug, { version: "draft", language, resolve_relations: resolveRelations },
   {
-    resolve_relations: ["featured-posts.posts", "selected-posts.posts"],
+    resolveRelations,
+
   },
-  {
-    resolveRelations: ["featured-posts.posts", "selected-posts.posts"],
-  }
+
 );
 
 if (!story?.content) {
