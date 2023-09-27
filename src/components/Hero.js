@@ -2,6 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 
 
 const Hero  = ({ blok }) => {
+  
     const immaginesfondo = blok.img_sfondo.filename
 
   return (
