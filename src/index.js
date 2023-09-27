@@ -21,6 +21,7 @@ import Separatore from "./components/Separatore";
 import Hero2 from "./components/Hero2";
 import Calltoactionsmall from "./components/Calltoactionsmall";
 import Slider from "./components/Slider";
+import Layout from "./components/Layout";
 
 const components = {
   feature: Feature,
@@ -55,6 +56,8 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
+    <Layout>
     <App />
+    </Layout>
   </React.StrictMode>
 );
